@@ -14,7 +14,7 @@ import java.util.Date;
 public class StarBaseClientDeviceEntity extends StarBaseNumEntity {
 
     @ApiModelProperty("设备类型id")
-    private Long deviceTyepId;
+    private Long deviceTypeId;
     @ApiModelProperty("设备唯一识别码")
     private String deviceCode;
     @ApiModelProperty("设备名称")
