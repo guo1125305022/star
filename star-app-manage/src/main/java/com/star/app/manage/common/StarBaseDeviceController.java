@@ -9,6 +9,7 @@ public interface StarBaseDeviceController {
 
     /**
      * 注册客户端设备
+     *
      * @param entity 客户端设备信息
      * @return
      */
