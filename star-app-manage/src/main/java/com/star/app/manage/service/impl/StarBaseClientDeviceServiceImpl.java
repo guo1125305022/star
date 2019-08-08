@@ -25,6 +25,11 @@ public class StarBaseClientDeviceServiceImpl extends ServiceImpl<StarBaseClientD
         return getOne(lambdaQueryWrapper);
     }
 
+    /**
+     * 注册客户端设备
+     *
+     * @param entity
+     */
     @Override
     public void registerClientDevice(StarBaseClientDeviceEntity entity) {
         if (entity == null) {
@@ -33,5 +38,13 @@ public class StarBaseClientDeviceServiceImpl extends ServiceImpl<StarBaseClientD
         if (StringUtils.isEmpty(entity.getDeviceCode())) {
             throw new ValidationException("未知客户端设备标示");
         }
+        if (StringUtils.isEmpty(entity.getDeviceName())) {
+            throw new ValidationException("设备名称不能为空");
+        }
+        StarBaseClientDeviceEntity baseClientDeviceEntity = getByDeviceCode(entity.getDeviceCode());
+        if (baseClientDeviceEntity == null) {
+            return;
+        }
+        save(entity);
     }
 }

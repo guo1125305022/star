@@ -32,7 +32,7 @@ public interface CommonConstant {
         String KEY_CODE = "code";
 
         String MESSAGE_DEFAULT_OK = "操作成功";
-        String MESSAGE_DEFAULT_FAILD="未知异常，请联系管理员";
+        String MESSAGE_DEFAULT_FAIL ="未知异常，请联系管理员";
         String MESSAGE_DEFAULT_LOGIN_OVERDUE="您的登录已经过期";
     }
 }

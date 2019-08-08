@@ -10,5 +10,4 @@ import lombok.Data;
 public class StarBaseNumEntity {
     @TableId(type = IdType.AUTO)
     private Long id;
-
 }

@@ -1,7 +1,6 @@
 package com.start.common;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 服务器处理返回结果
@@ -27,7 +26,7 @@ public class Result extends HashMap<String, Object> implements CommonConstant.We
     }
 
     public static Result fail(String message) {
-        return fail(CODE_FAIL, MESSAGE_DEFAULT_FAILD);
+        return fail(CODE_FAIL, MESSAGE_DEFAULT_FAIL);
     }
 
     /**
