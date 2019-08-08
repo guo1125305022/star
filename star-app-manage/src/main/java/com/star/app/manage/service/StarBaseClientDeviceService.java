@@ -12,4 +12,10 @@ public interface StarBaseClientDeviceService extends IService<StarBaseClientDevi
      */
     StarBaseClientDeviceEntity getByDeviceCode(String deviceCode);
 
+    /**
+     * 注册客户端设备
+     * @param entity
+     */
+    void registerClientDevice(StarBaseClientDeviceEntity entity);
+
 }

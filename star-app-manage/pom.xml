@@ -13,6 +13,9 @@
     <name>star-app-manage</name>
     <description>应用程序管理</description>
 
+    <modules>
+        <module>../star-base-entity</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
         <star.base.entity.version>1.0-SNAPSHOT</star.base.entity.version>
@@ -33,11 +36,7 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.star</groupId>
-            <artifactId>star-base-entity</artifactId>
-            <version>${star.base.entity.version}</version>
-        </dependency>
+
         <dependency>
             <artifactId>star-common</artifactId>
             <groupId>com.star</groupId>

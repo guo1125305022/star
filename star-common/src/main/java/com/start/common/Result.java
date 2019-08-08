@@ -14,19 +14,19 @@ public class Result extends HashMap<String, Object> implements CommonConstant.We
         put(KEY_DATA, data);
     }
 
-    private Result create(int code, String message, Object data) {
+    private static Result create(int code, String message, Object data) {
         return new Result(code, message, data);
     }
 
-    public Result ok(String message, Object data) {
+    public static Result ok(String message, Object data) {
         return create(CODE_OK, message, data);
     }
 
-    public Result ok(Object data) {
+    public static Result ok(Object data) {
         return ok(MESSAGE_DEFAULT_OK, data);
     }
 
-    public Result fail(String message) {
+    public static Result fail(String message) {
         return fail(CODE_FAIL, MESSAGE_DEFAULT_FAILD);
     }
 
@@ -37,7 +37,7 @@ public class Result extends HashMap<String, Object> implements CommonConstant.We
      * @param message
      * @return
      */
-    public Result fail(int code, String message) {
+    public static Result fail(int code, String message) {
         return create(code, message, null);
     }
 
@@ -46,7 +46,7 @@ public class Result extends HashMap<String, Object> implements CommonConstant.We
      *
      * @return
      */
-    public Result loginOverDue() {
+    public static Result loginOverDue() {
         return fail(CODE_LOGIN_OVERDUE, MESSAGE_DEFAULT_LOGIN_OVERDUE);
     }
 

@@ -14,6 +14,7 @@
     <groupId>com.star</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <description>通用工具包</description>
+    <modules></modules>
 <!--    <build>-->
 <!--        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>-->
 <!--        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>-->

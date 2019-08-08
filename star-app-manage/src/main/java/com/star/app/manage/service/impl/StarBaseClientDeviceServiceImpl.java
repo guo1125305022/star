@@ -6,6 +6,9 @@ import com.star.app.manage.dao.StarBaseClientDeviceDao;
 import com.star.app.manage.entity.StarBaseClientDeviceEntity;
 import com.star.app.manage.service.StarBaseClientDeviceService;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import javax.validation.ValidationException;
 
 @Service
 public class StarBaseClientDeviceServiceImpl extends ServiceImpl<StarBaseClientDeviceDao, StarBaseClientDeviceEntity> implements StarBaseClientDeviceService {
@@ -20,5 +23,15 @@ public class StarBaseClientDeviceServiceImpl extends ServiceImpl<StarBaseClientD
         LambdaQueryWrapper<StarBaseClientDeviceEntity> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(StarBaseClientDeviceEntity::getDeviceCode, deviceCode);
         return getOne(lambdaQueryWrapper);
+    }
+
+    @Override
+    public void registerClientDevice(StarBaseClientDeviceEntity entity) {
+        if (entity == null) {
+            throw new ValidationException("未知设备注册");
+        }
+        if (StringUtils.isEmpty(entity.getDeviceCode())) {
+            throw new ValidationException("未知客户端设备标示");
+        }
     }
 }
